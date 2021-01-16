@@ -1,0 +1,109 @@
+JSP:
+-------
+
+Java Server Packages , get executed at servers like Tomcat.
+TO execute JSP we can use any Web server which consist of JSP Engine.
+
+Presentation --> JSP can be used as View.
+
+
+<h1>HELLO WORLD</h1>  inside java --> servlet
+
+demo.html  ---> Writing java code inside html is JSP 
+
+
+demo.jsp  file ---> servlet demo_jsp.java   ---javac--> demo_jsp.class --> servlet initi
+
+init --> service--> destroy 
+
+//auto generated servlet pgm
+public class  demo_jsp extends HttpServlet {
+
+		static String name;
+
+	
+	public void _jspinit(){
+
+
+		
+
+		
+
+	}
+
+	public void _jspservice(HttpServletRequest request,HttpSErvletResponse response){
+
+		JSPWriter out;
+
+		ServletConfig config;
+		ServletContext application;   // all these are implicit jsp object or variables
+		HttpSession  session;		
+
+		Object page;
+
+		JSPException exception;
+
+		PageContext pageContext;  // request , application and session
+
+
+	pageContext.setAttribute() or pageContext.getAttribute()  or pageContext.removeAttribute()
+
+
+
+		int x=99;
+
+		out.print(x);
+
+		out.print("this is JSP Expression value");  // normal text or template
+
+		out.print(x);
+
+
+
+
+
+
+
+	}
+
+
+	public void _jspdestroy(){
+
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+JPS Elements:
+-------------
+1.JSP scriplet  <%  java source code %>
+
+2. JSP Expression <%= java code with out semicolon %>
+
+3. JSP Directives <%@ directives  %>   directives ---> page,taglib,include
+TO give additional instructions to the servers
+
+4. JSP Declaration <%!  java code  %>   
+
+5. EL-Expressions  (Expresion Language Expressions) -->     ${ print scope variable }
+
+
+
+
+
+
+
+
+
+
+
+
+
