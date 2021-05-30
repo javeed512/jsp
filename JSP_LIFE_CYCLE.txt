@@ -1,0 +1,160 @@
+
+
+JSP Elements/Tags:
+-------------------
+1. JSP Templates (any text or HTML)
+2. Scriplet   <%  %>  (write java code)
+
+
+
+
+Scope Variables/Objects in JSP:
+===============================
+1. pageContext
+2. request
+3. session
+4. application
+
+
+setAttribute() , getAttribute() , removeAttribute()
+
+
+
+
+
+JSP LIFE CYCLE STEPS:
+======================
+1. JSP File get compile by JSP Compiler  demo.jsp
+2. After JSP compilation we get .java file (auto-generated servlet)
+		demo_jsp.java
+3. Java Compiler compiles .java file which generate .class file
+
+	demo_jsp.java ----> demo_jsp.class
+4. JVM executes .class file and instantiation of Servlet class take place
+	
+
+
+
+
+
+
+
+demo.jsp  ---->  demo_jsp.java
+
+
+
+public class Demo_Jsp   extends HttpServlet implements JspPage, HttpJspPage{  // auto-generated servlet for given jsp
+
+	PageContext pageContext;  // get all implicit object outside jspService()
+
+		HttpSession session2 = pageContext.getSession();
+
+	
+	private int eid;
+	private String ename;
+	
+	static  double salary
+
+	void hello(){
+			
+			
+		}	
+
+
+	public void _jspInit(){
+
+
+		// initialization 
+	}
+
+
+	public void _jspService(HttpServletRequest request ,HttpServletResponse response ){
+
+
+
+		
+	
+
+	
+		
+			//JSP implicit objects or variables
+		JSPWriter out;   // JSPWriter is child of PrintWriter
+		HttpSession  session;
+		Object page;
+		ServletConfig config;
+		ServletContext application;
+		JspException exception;
+
+		
+
+
+
+		out.print("<h1>WELCOME TO JSP</h1>");
+
+		out.print("This is my message.");
+
+		int x;
+		int  id = 101;
+
+		String name ="javeed";
+
+
+		out.print(id+"  "+name);
+
+
+
+		int amount = 8000;
+	double value = 9.99;
+	String str = new String("hello friends");
+
+	out.print(amount +"  "+value+"  "+str );
+
+	
+		out.print(new String("javeed"));
+
+	out.print(num);
+
+
+	}
+
+	public void _jspDestroy(){
+
+		// destroy 
+
+	}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+java
+---
+
+try{
+
+}
+catch(Exception e){
+
+	e.printStackTrace();
+
+	System.out.println(e);
+
+}
+
+
+
+
+
+
+
